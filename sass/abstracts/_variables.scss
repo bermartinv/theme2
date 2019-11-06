@@ -1,0 +1,32 @@
+/* colors variables SASS 
+$Primary: #F0F7D4;
+$Primarylight: #B2D732;
+$Primarydark: #FE2712;
+
+$Greylight1: #faf9f9;
+$Greylight2: #f4f2f2;
+$Greylight3: #f0eeee;
+$Greylight4: #ccc;
+
+$Greydark1: #333;
+$Greydark2: #777;
+$Greydark3: #999;
+*/
+
+// variables CSS
+:root{
+    --colorprimary: #F0F7D4;
+    --colorprimarylight: #B2D732;
+    --colorprimarydark: #FE2712;
+
+    --colorgreylight1: #faf9f9;
+    --colorgreylight2: #f4f2f2;
+    --colorgreylight3: #f0eeee;
+    --colorgreylight4: #ccc;
+
+    --colorgreydark1: #333;
+    --colorgreydark2: #777;
+    --colorgreydark3: #999;
+
+    --shadowdark :0 2rem 6rem rgba(0,0,0,.3);
+}

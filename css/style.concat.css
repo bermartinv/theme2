@@ -1,0 +1,56 @@
+
+/* colors variables SASS 
+$Primary: #F0F7D4;
+$Primarylight: #B2D732;
+$Primarydark: #FE2712;
+
+$Greylight1: #faf9f9;
+$Greylight2: #f4f2f2;
+$Greylight3: #f0eeee;
+$Greylight4: #ccc;
+
+$Greydark1: #333;
+$Greydark2: #777;
+$Greydark3: #999;
+*/
+:root {
+  --colorprimary: #F0F7D4;
+  --colorprimarylight: #B2D732;
+  --colorprimarydark: #FE2712;
+  --colorgreylight1: #faf9f9;
+  --colorgreylight2: #f4f2f2;
+  --colorgreylight3: #f0eeee;
+  --colorgreylight4: #ccc;
+  --colorgreydark1: #333;
+  --colorgreydark2: #777;
+  --colorgreydark3: #999; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-image: linear-gradient(to right bottom, var(--colorprimary), var(--colorprimarylight));
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: var(--colorgreydark2);
+  padding: 3rem; }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: red;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
