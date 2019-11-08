@@ -25,6 +25,9 @@ $Greydark3: #999;
   --colorgreydark1: #333;
   --colorgreydark2: #777;
   --colorgreydark3: #999;
+  --colorhotelview: #D4E4F7;
+  --colormenu: #236AB9;
+  --colormenuactive: #90A9C6;
   --shadowdark:0 2rem 6rem rgba(0,0,0,.3);
   --shadowinitial: 0px 3px 1px -2px rgba(0,0,0,0.2),
                      0px 2px 2px  0px rgba(0,0,0,0.14),
@@ -135,6 +138,67 @@ body {
   .button-material-desing:hover, .button-material-desing:focus {
     box-shadow: var(--shadowend); }
 
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--colormenu);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover:before, .side-nav__item--active:before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active:before {
+    background-color: var(--colormenuactive); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--colorgreylight1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: relative; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--colorgreylight4);
+  padding: 2.5rem; }
+
+.gallery {
+  display: flex;
+  flex-direction: row; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex; }
+  .overview__stars {
+    margin-right: auto; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--colorprimarydark); }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -154,9 +218,13 @@ body {
   display: flex; }
 
 .sidebar {
-  background-color: red;
-  flex: 0 0 18%; }
+  background-color: var(--colorgreydark1);
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
-  background-color: pink;
+  background-color: var(--colorhotelview);
+  height: 80rem;
   flex: 1; }
