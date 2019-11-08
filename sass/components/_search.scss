@@ -1,0 +1,44 @@
+.search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--colorgreylight2);
+        border: solid thin lightgrey;
+        color: inherit;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        margin-right: -3.5rem;
+        
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--colorgreylight3);
+        }
+    }
+
+    &__button{
+        border: none;
+        background-color: var(--colorgreylight2);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+
+    }
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
