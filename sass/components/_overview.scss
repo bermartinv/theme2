@@ -1,14 +1,20 @@
 .overview {
     display: flex;
-    
+    align-items: center;
+    border-bottom: 1px solid var(--colorgreylight2);
 
     &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
 
     }
 
     &__stars {
         margin-right: auto;
-        //background-color: yellow;
+        display: flex;
     }
 
     &__icon-star,
@@ -19,18 +25,35 @@
     }
 
     &__location {
-        
+        font-size: 1.2rem;
+        display: flex;
+        vertical-align: center;
+    }
+
+    &__icon-location {
+        margin-right: .5rem;
     }
 
     &__rating {
+        background-color: var(--colormenu);
+        color: var(--colorblanco);
+        margin-left: 3rem;
+        padding:0 2.25rem;
+        align-self: stretch;
 
+        @include centrar;
+        flex-direction: column;
     }
 
     &__rating-average{
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -3px;
 
     }
 
     &__rating-count {
-
+        font-size: .8rem;
+        text-transform: uppercase;
     }
 }
