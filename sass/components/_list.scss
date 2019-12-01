@@ -20,14 +20,14 @@
         margin-right: .7rem;
         font-weight: 900;
 // older browsers
-//       background-image: url(../../img/chevron-thin-right.svg);
-//       background-size: cover;
+       background-image: url(../../img/chevron-thin-right.svg);
+       background-size: cover;
       
-// modern browsers
+/* modern browsers
          background-color: var(--colormenu);
          -webkit-mask-image: url(../../img/chevron-thin-right.svg);
          -webkit-mask-size: cover;
          mask-image: url(..img/chevron-thin-right.svg);
-         mask-size: cover;
+         mask-size: cover;*/
     }
 }
