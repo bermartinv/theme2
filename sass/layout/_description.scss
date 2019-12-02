@@ -5,4 +5,10 @@
     background: var(--blanco);
     box-shadow: var(--shadowinitial);
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+           }
+
 }

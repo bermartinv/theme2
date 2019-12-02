@@ -242,8 +242,13 @@ body {
   background-color: transparent;
   cursor: pointer;
   transition: all .2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--colorgreydark3); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -299,10 +304,12 @@ body {
   box-shadow: var(--shadowend);
   padding: 3rem;
   margin-bottom: 3rem;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .review__text {
     margin-bottom: 2rem;
-    z-index: 0; }
+    z-index: 10;
+    position: relative; }
   .review__user {
     display: flex;
     align-items: center; }
@@ -323,8 +330,8 @@ body {
     color: var(--colorgreydark3); }
   .review__rating {
     color: var(--colorprimarydark);
-    font-size: 3.2rem;
-    font-weight: 300; }
+    font-size: 2.2rem;
+    font-weight: 800; }
   .review::before {
     content: "\201C";
     position: absolute;
@@ -335,6 +342,48 @@ body {
     color: var(--colorhotelview);
     font-family: sans-serif;
     z-index: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, darkred, var(--colorprimarydark));
+  color: var(--colorblanco);
+  position: relative;
+  overflow: hidden; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+  .btn__visible {
+    display: inline-block;
+    padding: 2rem 7.5rem; }
+  .btn__invisible {
+    position: absolute;
+    padding: 2rem 7.5rem;
+    left: 0;
+    top: -100%; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--colorprimarydark), darkred); }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
+  .btn:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
 
 .container {
   max-width: 120rem;
@@ -380,4 +429,7 @@ body {
   border-bottom: var(--line); }
 
 .user-review {
-  display: flex; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
